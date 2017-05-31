@@ -6,17 +6,7 @@ include: "*.view"
 # include all the dashboards
 include: "*.dashboard"
 
-explore: accidents {}
 
-explore: aircraft {}
-
-explore: aircraft_models {}
-
-explore: airports {}
-
-explore: cal454 {}
-
-explore: carriers {}
 
 explore: flights {
   join: airports {
@@ -25,9 +15,20 @@ explore: flights {
     sql_on: ${flights.origin}=${airports.code};;
   }
 }
+# explore: accidents {}
+#
+# explore: aircraft {}
+#
+# explore: aircraft_models {}
+#
+# explore: airports {}
+#
+# explore: cal454 {}
+#
+# explore: carriers {}
 
-explore: flights_by_day {}
-
-explore: ontime {}
-
-explore: temp2 {}
+# explore: flights_by_day {}
+#
+# explore: ontime {}
+#
+# explore: temp2 {}
