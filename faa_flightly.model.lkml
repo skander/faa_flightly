@@ -14,6 +14,11 @@ explore: flights {
     type: inner
     sql_on: ${flights.origin}=${airports.code};;
   }
+  join: flights_fact {
+    relationship: many_to_one
+    type: inner
+    sql_on: ${flights.tail_num} = ${flights_fact.tail_num};;
+    }
 }
 # explore: accidents {}
 #

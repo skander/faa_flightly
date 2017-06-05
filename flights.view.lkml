@@ -144,6 +144,7 @@ view: flights {
     type: number
     value_format_name: percent_2
     sql: 1.0 * ${total_flight_verylate}/NULLIF(${count},0) ;;
+    drill_fields: [flight_num,dep_date,carrier,delay_status,destination,origin,airports.county,airports.full_name]
   }
 ##Percentage on time flight only##
   measure: total_flight_ontime {
@@ -165,4 +166,6 @@ view: flights {
     type: count
     drill_fields: []
   }
+
+
 }
